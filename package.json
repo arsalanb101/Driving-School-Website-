@@ -1,0 +1,86 @@
+{
+  "name": "driving-school-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@coreui/chartjs": "^2.0.0",
+    "@coreui/coreui": "^3.4.0",
+    "@coreui/icons": "^2.0.1",
+    "@coreui/icons-react": "^1.1.0",
+    "@coreui/react": "^3.4.6",
+    "@coreui/react-chartjs": "^1.1.0",
+    "@coreui/utils": "^1.3.1",
+    "@fullcalendar/core": "^5.7.0",
+    "@fullcalendar/daygrid": "^5.7.0",
+    "@fullcalendar/interaction": "^5.7.0",
+    "@fullcalendar/react": "^5.7.0",
+    "@hookform/resolvers": "^2.4.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/system": "^4.11.3",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "antd": "^4.15.3",
+    "auth0-js": "^9.16.0",
+    "axios": "^0.21.1",
+    "cogo-toast": "^4.2.3",
+    "css-vars-ponyfill": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "file-saver": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-awesome-reveal": "^3.4.0",
+    "react-chat-window": "^1.2.1",
+    "react-dom": "^17.0.2",
+    "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.4.1",
+    "react-material-ui-form-validator": "^2.1.4",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-popconfirm": "^0.1.1",
+    "react-quill": "^1.3.3",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-transition-group": "^4.4.1",
+    "react-use-googlelogin": "^0.12.5",
+    "react-vis": "^1.11.7",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.3",
+    "web-vitals": "^1.1.1",
+    "yup": "^0.32.9"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-disable": "^2.0.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "sass": "^1.92.1"
+  }
+}

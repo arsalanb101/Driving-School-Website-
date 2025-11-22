@@ -1,0 +1,13 @@
+{
+  "title": "Managment System For Driving School",
+  "text": "Auto-Ecole.tn is a complete driving school management system that handles almost all tasks done daily by driving schools. Below is a list of the features of Auto-Ecole.tn.",
+  "button": [
+    {
+      "title": "Explore"
+    },
+    {
+      "title": "Learn More",
+      "color": "#fff"
+    }
+  ]
+}
