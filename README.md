@@ -1,72 +1,190 @@
-# Driving School managmenet system: Frontend Repo [![Deployment](https://github.com/SlaySayto/driving-schools-web-app/actions/workflows/main.yml/badge.svg)](https://github.com/SlaySayto/driving-schools-web-app/actions/workflows/main.yml)
-[DEMO](http://auto-ecole.tn.s3-website.eu-west-3.amazonaws.com/companies/60b802626730d700090951b2/dashboard)
+⭐ DRIVING SCHOOL MANAGEMENT SYSTEM — (React + Node + OpenAI Chatbot)
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+A modernized, responsive, full-stack Driving School Management System built with React, Node.js, and an integrated OpenAI-powered AI Chatbot for real-time conversation and support.
 
- ## Clean, Beautiful and Responsive management system for driving school
- ![image](https://drive.google.com/uc?export=view&id=1iWnglYWDYpAVGYVMcQllSMjdlscad4So)
+This project is a rewrite of an older Angular version, redesigned with a more scalable architecture, cleaner UI, and integrated AI capabilities.
+
+🚀 Features
+Frontend (React)
+
+Clean, responsive interface
+
+CoreUI + Material UI styling
+
+Redux-based state management
+
+Chat widget (react-chat-window)
+
+Backend (Node.js)
+
+Custom Express server
+
+AI Chat endpoint using OpenAI API
+
+Secure .env variable handling
+
+CORS-enabled for local dev
+
+AI Chatbot
+
+Real-time responses using OpenAI
+
+Context-aware conversation
+
+Floating chat widget integrated into the UI
+
+Fully customizable theme
+
+🗂 Project Structure
+project-root/
+│
+├── server/           # Node backend (OpenAI calls)
+│   ├── server.js
+│   ├── package.json
+│   ├── .env          # contains API keys (NOT committed)
+│   └── .env.example  # safe template for others
+│
+├── src/              # React frontend
+│   ├── components/
+│   │    └── ChatWidget.jsx
+│   ├── chat-widget-theme.css
+│   └── ...
+│
+├── package.json      # Frontend dependencies
+└── README.md
+
+🛠 Getting Started (Local Development)
+
+This project uses two servers:
+
+React frontend → http://localhost:3000
+
+Node backend (AI server) → http://localhost:3001
+
+Follow these steps carefully 👇
+
+1️⃣ Clone the Repository
+git clone https://github.com/YOUR_USERNAME/driving-schools-web-app.git
+cd driving-schools-web-app
+
+2️⃣ Install Frontend Dependencies
+npm install
+
+3️⃣ Set Up Backend (AI Server)
+
+Go inside the server folder:
+
+cd server
+npm install
 
 
+Create an .env file:
 
-## About The Project
-
-This project started as an end of study project and was build using Angular and NodeJs. But it wasn't well design and not responsive.
-We decided to re-design the entiere project and use a microserive architecture and Develope the frontend from scratch using ReactJs. For better performance. 
-
-This repo contain the frontend part of the system.\
-The [Backend](https://github.com/SlaySayto/AE) is created with NodeJs in another repo.
-
-## Build With
-
-+ [ReactJs](https://reactjs.org/) for view rendering
-+ [Redux](https://redux.js.org/) for state managment
-+ [Axios](https://www.npmjs.com/package/axios) for making https requests
-+ [Material-UI](https://material-ui.com/) for faster and easier web development
-+ [Coreui](https://coreui.io/) Bootstrap Admin Template
-+ [AWS S3](https://aws.amazon.com/s3/) for hosting the application
-+ [GitHub Action](https://github.com/features/actions) to automate the deployment of the App
-
-## Deployement
-
-The project is build and deployed using github action in s3 every time a new commit in master bransh occure.
-
-![image](https://user-images.githubusercontent.com/16466499/123438022-32f49f80-d5c8-11eb-9692-34df210e279c.png)
+cp .env.example .env
 
 
-## Available Scripts
+Then open .env and put your actual OpenAI API key:
 
-In the project directory, you can run:
+OPENAI_API_KEY=sk-xxxxxxx
+PORT=3001
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+⚠️ Never commit this file.
+The repo already includes a .gitignore entry so .env stays private.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4️⃣ Start Backend
+npm run dev
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.
+Expected output:
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/SlaySayto/driving-schools-web-app.svg?style=for-the-badge
-[contributors-url]: https://github.com/SlaySayto/driving-schools-web-app/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/SlaySayto/driving-schools-web-app.svg?style=for-the-badge
-[forks-url]: https://github.com/SlaySayto/driving-schools-web-app/network/members
-[stars-shield]: https://img.shields.io/github/stars/SlaySayto/driving-schools-web-app.svg?style=for-the-badge
-[stars-url]: https://github.com/SlaySayto/driving-schools-web-app/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SlaySayto/driving-schools-web-app.svg?style=for-the-badge
-[issues-url]: https://github.com/SlaySayto/driving-schools-web-app/issues
-[license-shield]: https://img.shields.io/github/license/SlaySayto/driving-schools-web-app.svg?style=for-the-badge
-[license-url]: https://github.com/SlaySayto/driving-schools-web-app/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ahmed-benyahia-ss
-[product-screenshot]: images/screenshot.png
+OPENAI key loaded: true
+API listening on http://localhost:3001
 
+
+Leave this running.
+
+5️⃣ Start Frontend
+
+Open a new terminal:
+
+npm start
+
+
+Your app is now available at:
+
+👉 http://localhost:3000
+
+And the chatbot will communicate with the backend through:
+
+POST /api/chat
+
+🔐 Environment Variables
+
+We use .env files to keep secrets safe.
+
+Example environment file:
+
+(server/.env.example)
+
+OPENAI_API_KEY=your_openai_key_here
+PORT=3001
+
+To create your own .env:
+cp server/.env.example server/.env
+
+
+Then edit the values inside.
+
+🧠 AI Chatbot Integration
+
+The chatbot uses:
+
+react-chat-window for UI
+
+Custom ChatWidget.jsx
+
+/api/chat backend endpoint
+
+OpenAI's GPT models
+
+Example backend call:
+
+const completion = await openai.chat.completions.create({
+  model: "gpt-4o-mini",
+  messages,
+});
+
+📦 Deployment Guide
+
+When deploying:
+
+❗ You must set environment variables on the host:
+
+For example on Render, Railway, Heroku, Vercel:
+
+OPENAI_API_KEY=sk-xxxxx
+PORT=3001
+
+
+You do not upload .env to GitHub.
+
+Your frontend should be configured to call the deployed server URL.
+
+📑 Scripts
+Frontend
+npm start        # run dev server
+npm run build    # production build
+
+Backend
+npm run dev      # development (nodemon)
+npm start        # production
+
+🤝 Contributing
+
+Pull requests are welcome!
+If you want to add features, just open an issue.
+
+🛡 License
+
+This project is licensed under the MIT License.
